@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="apple-mobile-web-app-capable" content="yes" /> 
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<title>
+			Tiad Demo
+		</title>
+
+		<link rel="stylesheet" href="tiad.css" type="text/css" media="screen" /> 
+		
+		<script src="js/jquery-1.11.3.js"></script>
+		<script src="js/streamdataio.min.js"></script>
+		<script src="js/jsonpatch.min.js"></script>
+		<script src="js/tiad.js"></script>
+
+		<script type="text/javascript">
+	      	// ADD YOUR STREAMDATA.IO API KEY PAIR HERE
+			window.streamdatatoken = "[YOUR_STREAMDATAIO_APP_TOKEN]";
+		</script>
+	</head>
+
+	<body onload="initialize();">
+  	<div class="parent">
+    	<div class="enfant">
+    		<table>
+    			<tr><td colspan="4">
+			    	<div>
+			  			<div class="logos"><span><img src="img/liveobjects.png"></span></div>
+			  			<div class="logos"><span><img src="img/arrow.png"></span></div>
+			  			<div class="logos"><span><img style="padding:10px" src="img/orange.png"></span></div>
+			  			<div class="logos"><span><img src="img/arrow.png"></span></div>
+			  			<div class="logos"><span><img src="img/streamdata.png"></span></div>
+			  			<div class="logos"><span><img src="img/arrow.png"></span></div>
+			  			<div class="logos"><span><img src="img/tiad.jpg"></span></div>
+			  		</div>
+	  			</td></tr>
+	  			
+	  			<tr><td colspan="4">
+	  				<div class="space"></div>
+	  			</td></tr>
+	  			
+	  			<tr>
+		  			<td>
+						<div class="light" id="livingroom">
+							<div class="lamp flat">
+								<div class="light-back"></div>
+								<div></div>
+							</div>
+						</div>
+				    </td>
+		  			<td>
+						<div class="light" id="guirlande">
+							<div class="lamp flat">
+								<div class="light-back"></div>
+								<div></div>
+							</div>
+						</div>
+				    </td>
+		  			<td>
+						<div class="light" id="desk">
+							<div class="lamp flat">
+								<div class="light-back"></div>
+								<div></div>
+							</div>
+						</div>
+				    </td>
+				    <td>
+						<div style="width: 200px; height: 200px;float: none;clear: both;" id="motion"></div>
+					</td>
+				</tr>
+	  			
+	  			<tr>
+		  			<td>
+						<div class="centered">Philips Hue<br>Living Room</div>
+				    </td>
+		  			<td>
+						<div class="centered">Philips LightStrips<br>Guirlande</div>
+				    </td>
+		  			<td>
+						<div class="centered">Lifx Original<br>Desk</div>
+				    </td>
+				    <td>
+						<div class="centered">Live Objects<br>Motion sensor</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	</body>
+</html>

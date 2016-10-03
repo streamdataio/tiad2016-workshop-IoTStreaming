@@ -1,0 +1,200 @@
+#motion
+{
+	background-image: url(img/homelivemotionsensor.png);
+	background-size: contain;
+}
+
+@-webkit-keyframes wiggle
+{
+	0% {-webkit-transform: rotateZ(2deg);}
+	50% {-webkit-transform: rotateZ(-2deg);}
+	100% {-webkit-transform: rotateZ(2deg);}
+}
+
+@-moz-keyframes wiggle
+{
+	0% {-moz-transform: rotateZ(2deg);}
+	50% {-moz-transform: rotateZ(-2deg);}
+	100% {-moz-transform: rotateZ(2deg);}
+}
+
+@-o-keyframes wiggle
+{
+	0% {-o-transform: rotateZ(2deg);}
+	50% {-o-transform: rotateZ(-2deg);}
+	100% {-o-transform: rotateZ(2deg);}
+}
+
+@keyframes wiggle
+{
+	0% {transform: rotateZ(2deg);}
+	50% {transform: rotateZ(-2deg);}
+	100% {transform: rotateZ(2deg);}
+}
+
+#motion.in-motion
+{
+	-webkit-animation: wiggle 0.2s ease infinite;
+	-moz-animation: wiggle 0.2s ease infinite;
+	-o-animation: wiggle 0.2s ease infinite;
+	animation: wiggle 0.2s ease infinite;
+}
+
+.parent { display:flex; min-height:100vh; }
+.enfant { margin:auto; }
+.logos { height:140px;  display:table; float:left; }
+.space { height:40px; }
+.centered
+{
+	text-align: center;
+	margin:auto;
+	width:100%;
+}
+
+/* ligths */
+
+.light
+{
+	display: block;
+	float: left;
+	margin-right: 30px;
+}
+
+.light .name {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+.lamp {
+	cursor: pointer;
+	display: inline-block;
+	margin-left: 20px;
+	position: relative;
+}
+.lamp .shadow {
+	background: rgba(0, 0, 0, 0.4) none repeat scroll 0 0;
+	border-radius: 100px;
+	display: block;
+	filter: blur(25px);
+	height: 60px;
+	left: 50%;
+	opacity: 1;
+	position: absolute;
+	top: 200px;
+	transform: rotate3d(1, 0, 0, 80deg);
+	transition: all 0.4s ease 0s;
+	width: 80px;
+}
+.lamp div:first-child {
+	background: #dcdcdc none repeat scroll 0 0;
+	border-radius: 50px 50px 50px 30px;
+	height: 80px;
+	position: relative;
+	transform: rotateZ(-45deg);
+	width: 80px;
+}
+.lamp div:first-child::after {
+	background: rgba(0, 0, 0, 0) linear-gradient(rgba(255, 255, 255, 0.6), transparent, transparent) repeat scroll 0 0;
+	border-radius: 100px;
+	content: "";
+	height: 94px;
+	left: 3px;
+	position: absolute;
+	top: 3px;
+	width: 94px;
+}
+.lamp div:first-child::before {
+	border-left: 16px solid transparent;
+	border-right: 16px solid transparent;
+	border-top: 32px solid #dcdcdc;
+	content: "";
+	height: 0;
+	position: absolute;
+	right: 26px;
+	top: 47px;
+	transform: rotateZ(45deg);
+	width: 41px;
+	z-index: 0;
+}
+.lamp div:last-child {
+	background: #dcdcdc none repeat scroll 0 0;
+	border-radius: 0 0 20px 20px;
+	box-shadow: 0 -3px 3px rgba(0, 0, 0, 0.2) inset;
+	height: 30px;
+	left: 20px;
+	position: absolute;
+	top: 86px;
+	width: 42px;
+}
+.lamp div:last-child::before {
+	background: #888 none repeat scroll 0 0;
+	border-radius: 2px 2px 17px 17px;
+	box-shadow: -1px -5px 10px rgba(0, 0, 0, 0.3) inset;
+	content: "";
+	height: 30px;
+	left: 0;
+	position: absolute;
+	top: 4px;
+	width: 42px;
+}
+.lamp div:last-child::after {
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 8px solid #444;
+	box-shadow: -1px -5px 2px rgba(0, 0, 0, 0.8) inset;
+	content: "";
+	height: 0;
+	left: 5px;
+	position: absolute;
+	top: 30px;
+	width: 12px;
+}
+body.turn {
+	background: #222 none repeat scroll 0 0;
+	color: #efef5f;
+}
+body.turn a {
+	border-color: #efef5f;
+	color: #efef5f;
+}
+body.turn a:hover, body.turn a.active {
+	background: #efef5f none repeat scroll 0 0;
+	color: #222;
+}
+.lamp.flat div:first-child, .lamp.flat div:last-child {
+	background: #ccc none repeat scroll 0 0;
+}
+.lamp.flat div:first-child::before {
+	border-top-color: #ccc;
+}
+.lamp.flat .shadow {
+	background: rgba(0, 0, 0, 0.2) none repeat scroll 0 0;
+	filter: none;
+}
+.turn .lamp div:first-child {
+	background: #ffff35 none repeat scroll 0 0;
+	box-shadow: 1px 1px 200px 10px rgba(255, 255, 50, 0.5);
+}
+.turn .lamp div:last-child {
+	background: #ffff35 none repeat scroll 0 0;
+	box-shadow: 0 -3px 3px rgba(0, 0, 0, 0.4) inset;
+}
+.turn .lamp div:first-child::before {
+	border-top-color: #ffff35;
+}
+.turn .lamp .shadow {
+	opacity: 0;
+}
+.lamp.flat div:first-child, .lamp.flat div:last-child, .lamp.flat div:last-child::before, .lamp.flat div:last-child::after {
+	box-shadow: none;
+}
+.lamp.flat div:first-child::after {
+	background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+}
+.light.error {
+	opacity: 0.3;
+}
+.off .light-back {
+	background: rgba(0, 0, 0, 0.28) none repeat scroll 0 0 !important;
+}			
