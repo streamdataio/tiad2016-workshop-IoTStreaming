@@ -1,6 +1,6 @@
 # tiad2016-workshop-IoTStreaming
 
-A simple demo that displays the state of IoT devices on a basic interface updating in real-time.
+A simple demo that displays the state of IoT devices on a basic interface updating in real-time. This package will be used during the IoT Streaming Workshop @ TIAD 2016.
 
 Follow these steps to make it work:
 
